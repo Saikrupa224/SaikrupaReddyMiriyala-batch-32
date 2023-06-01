@@ -1,0 +1,39 @@
+<html>
+    <head>
+    </head>
+        <body>
+            <h1>Amount to be sent:</h1>
+            <label for="environment">Environment:</label>
+            <input type="text" id="environment" name="environment">
+            <button onclick="calculatesendingamount()">Calculate</button>
+            <p id="finalamount">
+            </p>
+         <script>
+            function calculatesendingamount(){
+            var sendamount=100;
+            var environment = document.getElementById("environment").value;
+            switch(environment)
+            {
+                case "dev":
+                    sendamount = sendamount+sendamount*0.1
+                    break;
+                case "stage":
+                sendamount=sendamount+sendamount*0.2
+                break;
+                case "test":
+                sendamount=sendamount+sendamount*0.3
+                break;
+                case "prod":
+                sendamount=sendamount+sendamount*0.05
+                break;
+                default:
+                sendamount="Invalid environment entered"
+                break;
+            }
+            console.log(sendamount);
+            document.getElementById("finalamount").innerHTML=sendamount;
+        }
+         </script>
+
+        </body>
+</html>
