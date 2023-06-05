@@ -2,34 +2,34 @@
     <head></head>
     <body>
         <script>
-        let hobbies = ['Reading', 'Painting', 'Cooking'];
+        let myhobbies = ['Playing Badminton', 'Dancing', 'singing'];
 
-function displayHobbies() {
+function showHobbies() {
   console.log('My Hobbies:');
-  console.log(hobbies);
+  console.log(myhobbies);
 }
 
-function addHobby(newHobby) {
-  hobbies.push(newHobby);
-  console.log(`Added "${newHobby}" to the list of hobbies.`);
+function addnewHobby(newHobby) {
+  myhobbies.push(newHobby);
+  console.log(`Added "${newHobby}" new hobby.`);
 }
 
 function deleteHobby(hobbyToDelete) {
-  const index = hobbies.indexOf(hobbyToDelete);
+  const index = myhobbies.indexOf(hobbyToDelete);
   if (index !== -1) {
-    hobbies.splice(index, 1);
-    console.log(`Deleted "${hobbyToDelete}" from the list of hobbies.`);
+    myhobbies.splice(index, 1);
+    console.log(`Deleted "${hobbyToDelete}"`);
   } else {
-    console.log(`"${hobbyToDelete}" does not exist in the list of hobbies.`);
+    console.log(`"${hobbyToDelete}" is not in the list of hobbies.`);
   }
 }
 
-displayHobbies();
+showHobbies();
 
-addHobby('Gardening'); 
-displayHobbies(); 
-deleteHobby('Painting'); 
-displayHobbies();
+addnewHobby('Reading'); 
+showHobbies(); 
+deleteHobby('Playing chess'); 
+showHobbies();
 </script>
     </body>
 </html>
