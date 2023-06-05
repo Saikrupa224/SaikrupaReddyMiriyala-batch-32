@@ -5,30 +5,25 @@
         let myhobbies = ['Playing Badminton', 'Dancing', 'singing'];
 
 function showHobbies() {
-  console.log('My Hobbies:');
-  console.log(myhobbies);
+  console.log('My Hobbies:'+myhobbies);
 }
-
-function addnewHobby(newHobby) {
-  myhobbies.push(newHobby);
-  console.log(`Added "${newHobby}" new hobby.`);
-}
-
-function deleteHobby(hobbyToDelete) {
-  const index = myhobbies.indexOf(hobbyToDelete);
-  if (index !== -1) {
-    myhobbies.splice(index, 1);
-    console.log(`Deleted "${hobbyToDelete}"`);
-  } else {
-    console.log(`"${hobbyToDelete}" is not in the list of hobbies.`);
-  }
-}
-
 showHobbies();
 
-addnewHobby('Reading'); 
-showHobbies(); 
-deleteHobby('Playing chess'); 
+function addnew() {
+  myhobbies.push('Reading');
+}
+addnew();
+showHobbies();
+
+function removevalue(Delete) {
+ var index = myhobbies.indexOf(Delete);
+  if (index > -1) {
+    myhobbies.splice(index, 1);
+  } else {
+    console.log("The hobby you entered is not in the list of hobbies.");
+  }
+}
+removevalue('Playing Badminton'); 
 showHobbies();
 </script>
     </body>
