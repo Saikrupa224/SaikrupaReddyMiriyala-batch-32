@@ -1,0 +1,39 @@
+<html>
+<head>
+    </head>
+<body>
+    <h1>Profile Information</h1>
+    <form>
+        <label for="FN">First Name:</label>
+        <input type="text" id="FN" name="FN"><br/>
+
+        <label for="LN">Last Name:</label>
+        <input type="text" id="LN" name="LN"><br/>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB"><br/>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email"><br/>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber"><br/>
+
+        <input type="button" value="Submit" onclick="output()">
+    </form>
+    <p id="final"></p>
+    <script>
+        function output() {
+            var FN = document.getElementById("FN").value;
+            var LN = document.getElementById("LN").value;
+            var DOB = document.getElementById("DOB").value;
+            var Email = document.getElementById("Email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var finaloutput = document.getElementById("final");
+            finaloutput.innerHTML = "First Name: " + FN + "<br/> " +"Last Name: " + LN + "<br/>" +"Date of Birth: " + DOB + "<br/>" +"Email: " + Email + "<br/>" +"Phone Number: " + phoneNumber;
+        }
+    </script>
+
+    
+</body>
+</html>
