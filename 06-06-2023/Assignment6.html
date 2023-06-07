@@ -1,0 +1,57 @@
+<html>
+<head>
+    </head>
+<body>
+    <h1>Profile Information</h1>
+    <form>
+        <label for="FN">First Name:</label>
+        <input type="text" id="FN" name="FN"><br/>
+
+        <label for="LN">Last Name:</label>
+        <input type="text" id="LN" name="LN"><br/>
+
+        <label for="gender">Last Name:</label>
+        <input type="text" id="gender" name="gender"><br/>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB"><br/>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email"><br/>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber"><br/>
+
+        <label for="hobby1"> Playing</label><br/>
+        <input type="checkbox" id="hobby1" name="hobby1" value="My hobby is playing badminton">
+
+        <label for="hobby2"> Reading</label><br/>
+        <input type="checkbox" id="hobby2" name="hobby2" value="My hobby is reading books">
+
+        <label for="hobby3">Dancing</label>
+        <input type="checkbox" id="hobby3" name="hobby3" value="one of my hobby is dancing">
+        
+
+        <input type="button" value="Submit" onclick="output()">
+    </form>
+    <p id="final"></p>
+    <script>
+        function output() {
+            var FN = document.getElementById("FN").value;
+            var LN = document.getElementById("LN").value;
+            var gender = document.getElementById("gender").value;
+            var DOB = document.getElementById("DOB").value;
+            var Email = document.getElementById("Email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var hobby1 = document.getElementById("hobby1").value;
+            var hobby2 = document.getElementById("hobby2").value;
+            var hobby3 = document.getElementById("hobby3").value;
+            var finaloutput = document.getElementById("final");
+            
+            finaloutput.innerHTML = "First Name: " + FN + "<br/> " +"Last Name: " + LN + "<br/>" +"Date of Birth: " + DOB + "<br/>" +"Email: " + Email + "<br/>" +"Phone Number: " + phoneNumber + "<br/>"+ hobby1 +"<br/>"+ hobby2 +"<br/>"+ hobby3;
+        }
+    </script>
+
+    
+</body>
+</html>
