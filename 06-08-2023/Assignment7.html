@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+    <body>
+        <h1>Find Second Smallest Number</h1>
+        <label for="numbers">Enter numbers:</label>
+        <input type="text" id="numbers">
+        <button onclick="findSecondSmallest()">Find Second Smallest</button>
+        <div id="result"></div>
+      </body>
+  <script>
+    Array.prototype.customSort = function() {
+    this.sort(function(a, b) {
+        return a - b;
+      });
+    };
+
+    Array.prototype.getSecondSmallest = function() {
+      this.customSort();
+      return this[1];
+    };
+
+    function findSecondSmallest() {
+      var inputNumbers = document.getElementById("numbers").value;
+      var numbersArray = inputNumbers.split(",").map(Number);
+      var secondSmallest = numbersArray.getSecondSmallest();
+      document.getElementById("result").innerHTML = "Second Smallest Number: " + secondSmallest;
+    }
+  </script>
+  </html>
