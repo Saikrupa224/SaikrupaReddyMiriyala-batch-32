@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
+
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       HeaderComponent,
-      NavigationComponent
+      NavigationComponent,
+      
    ],
   imports: [
     BrowserModule,
