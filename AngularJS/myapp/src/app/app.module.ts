@@ -8,7 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [					
     AppComponent,
       HeaderComponent,
       NavigationComponent,
