@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { LoginComponent } from './Login/Login.component';
+
 
 
 @NgModule({
@@ -12,6 +14,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     AppComponent,
       HeaderComponent,
       NavigationComponent,
+      LoginComponent,
       
    ],
   imports: [
