@@ -9,13 +9,13 @@ export class SidebarComponent implements OnInit {
 
   isClicked=false;
   items = [
-    { id:1,full_name: 'Sanjana Ravula', lead_name: 'Tejan', technology: 'Java',vendor_name:'Tech Systems',rate:'65/hr'},
-    { id:2,full_name: 'Roshini Racha', lead_name: 'Manohar', technology: 'Java',vendor_name:'Judge group',rate:'63/hr'},
-    { id:3,full_name: 'Rashmitha Reddy', lead_name: 'Kranthi', technology: 'Devops',vendor_name:'Avtech Solutions',rate:'75/hr' },
-    { id:4,full_name: 'Sangamithra', lead_name: 'Tejan', technology: 'Devops',vendor_name:'Prodware solutions',rate:'70/hr' },
-    { id:5,full_name: 'Rishika', lead_name: 'Manohar', technology: 'Devops',vendor_name:'Tech Systems',rate:'69/hr' },
-    { id:6,full_name: 'Bharathu', lead_name: 'Spandana', technology: 'Java',vendor_name:'Diamond Pick',rate:'65/hr' },
-    { id:7,full_name: 'Jahnavi', lead_name: 'Tejan', technology: 'Data Engineering',vendor_name:'Avalon software services',rate:'71/hr' },
+    { id:1,full_name: 'Saikrupa Reddy Miriyala', lead_name: 'Tejan', technology: 'Java',vendor_name:'Tech Systems',rate:'65/hr'},
+    { id:2,full_name: 'Nagarjuna Reddy', lead_name: 'Tejan', technology: 'Java',vendor_name:'Judge group',rate:'63/hr'},
+    { id:3,full_name: 'Mahitha', lead_name: 'Spandana', technology: 'Devops',vendor_name:'Avtech Solutions',rate:'75/hr' },
+    { id:4,full_name: 'Mavya', lead_name: 'Spandana', technology: 'Devops',vendor_name:'Prodware solutions',rate:'70/hr' },
+    { id:5,full_name: 'Vishal', lead_name: 'Manohar', technology: 'Devops',vendor_name:'Tech Systems',rate:'69/hr' },
+    { id:6,full_name: 'Rohith', lead_name: 'Spandana', technology: 'Java',vendor_name:'Diamond Pick',rate:'65/hr' },
+    { id:7,full_name: 'Vivek', lead_name: 'Tejan', technology: 'Data Engineering',vendor_name:'Avalon software services',rate:'71/hr' },
    ];
 
   selectedTechnology = '';
