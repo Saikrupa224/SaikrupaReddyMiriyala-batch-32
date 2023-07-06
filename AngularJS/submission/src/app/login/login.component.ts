@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +11,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  showText=false;
+  loginInfo = {
+    email: '',
+    pwd: ''
   }
+  isUserLoggedIn=true;
+  constructor(private router: Router, private aService: AuthService,private snackBar:MatSnackBar) { }
 
+  ngOnInit() { 
+    console.log('aService', this.aService.isLoggedIn);
+  }
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action);
+  }
+    onLogin() {
+      if (this.loginInfo.email === 'kesh@gmail.com' &&
+        this.loginInfo.pwd === '200') {
+          console.log('user Authenticated');
+
+         this.aService.isLoggedIn = true;
+          this.router.navigate(['/sidebar']);
+      } else {
+        console.log('user NOT Authenticated');
+       this.aService.isLoggedIn = false;
+       this.showText=true;
+      //  alert('InValid details!!!')
+    
+  }
+  }
 }
